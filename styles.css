@@ -1,0 +1,634 @@
+/* ==========================
+   Estilos Generales
+   ========================== */
+   body {
+    font-family: Arial, sans-serif; /* Establece la fuente */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    -webkit-font-smoothing: antialiased; /* Suavizado de fuentes en Safari */
+    -moz-osx-font-smoothing: grayscale; /* Suavizado de fuentes en Firefox (macOS) */
+  }
+  
+  /* ==========================
+     Contenedor Principal
+     ========================== */
+  .container {
+    width: 100%; /* Toma todo el ancho disponible */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: #fff; /* Fondo blanco */
+    padding: 0; /* Sin padding */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  /* ==========================
+     Encabezado (Banner)
+     ========================== */
+  .header-banner-container {
+    width: 100%; /* Ancho completo */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    margin-top: 0; /* Elimina margen superior */
+    height: 150px; /* Altura del banner */
+    overflow: hidden; /* Evita el desbordamiento de contenido */
+  }
+  
+  .header-banner {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-image: url('banner.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen */
+    background-position: center; /* Centra la imagen */
+    background-color: #0056b3; /* Color de fondo de reserva */
+  }
+  
+  /* Círculo de perfil sobre el banner */
+  .profile-circle {
+    width: 100px; /* Ancho fijo */
+    height: 100px; /* Alto fijo */
+    background-color: white; /* Fondo blanco */
+    border-radius: 50%; /* Círculo perfecto */
+    overflow: hidden; /* Recorta la imagen para que se ajuste al círculo */
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    top: 100px; /* Ajuste de la posición vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste de centrado exacto */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 3px solid #ffffff; /* Borde blanco */
+    z-index: 2; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .profile-circle img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    border-radius: 50%; /* Mantiene la forma circular */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el círculo */
+  }
+  
+  /* ==========================
+     Contenido Principal
+     ========================== */
+  .content {
+    padding: 20px; /* Padding interno */
+    background-color: white; /* Fondo blanco */
+    border-radius: 40px; /* Bordes más redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: relative; /* Posiciona de forma relativa */
+    top: 50px; /* Ajuste para el desplazamiento */
+    margin-top: -50px; /* Para evitar un espacio grande en la parte superior */
+    z-index: 1; /* Asegura que quede por debajo de la imagen de perfil */
+  }
+  
+  /* Título del negocio */
+  .business-title {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    margin-top: 35px; /* Margen superior */
+    text-align: center; /* Centrado horizontal */
+  }
+  
+  /* Botones de contacto */
+  .contact-buttons {
+    display: flex; /* Flexbox para alinear los botones */
+    justify-content: center; /* Centrado horizontal */
+    margin-top: 10px; /* Margen superior */
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  .contact-button {
+    padding: 6px 10px; /* Espaciado interno */
+    background-color: rgb(5, 161, 101); /* Fondo verde */
+    color: white; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado */
+    align-items: center; /* Alineación vertical */
+    gap: 5px; /* Espacio entre icono y texto */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    display: inline-flex; /* Flexbox para alinear iconos y texto */
+    justify-content: center; /* Centrado horizontal */
+  }
+  
+  .contact-button:hover {
+    background-color: #026617; /* Color de fondo al pasar el mouse */
+  }
+  
+  /* Información de entrega */
+  .delivery-info {
+    font-size: 0.8rem; /* Tamaño de fuente pequeño */
+    color: #666; /* Color gris */
+    margin-top: 5px; /* Margen superior */
+    text-align: center; /* Centrado */
+  }
+  
+  /* ==========================
+     Menú Sticky
+     ========================== */
+  .sticky-menu {
+    position: sticky; /* Hace que el menú se quede fijo al hacer scroll */
+    top: 0; /* Se fija en la parte superior */
+    background-color: white; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    z-index: 2; /* Asegura que se quede por encima de otros elementos */
+    padding: 10px 0; /* Espaciado vertical */
+    display: flex; /* Flexbox para alinear los enlaces */
+    justify-content: center; /* Centrado horizontal */
+    gap: 20px; /* Espacio entre los enlaces */
+    margin-top: 10px; /* Margen superior */
+  }
+  
+  .sticky-menu a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #007BFF; /* Color azul */
+    font-weight: bold; /* Negrita */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
+  }
+  
+  .sticky-menu a:hover {
+    background-color: #f2f2f2; /* Color de fondo al pasar el mouse */
+  }
+  
+/* ==========================
+   Productos
+   ========================== */
+   .product-container {
+    display: grid; /* Usamos grid para alinear los productos */
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+    gap: 20px; /* Espacio entre productos */
+    padding: 5px; /* Padding alrededor */
+    background-color: white; /* Fondo blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    padding-bottom: 50px; /* Espaciado inferior */
+  }
+  
+  .product {
+    display: flex; /* Flexbox para el contenido del producto */
+    flex-direction: row; /* Coloca los elementos en fila */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Distribuye espacio entre los elementos */
+    padding: 10px; /* Espaciado interno */
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  /* Información del producto */
+  .product-info {
+    flex: 1; /* Toma todo el espacio disponible */
+    padding-right: 20px; /* Espacio a la derecha */
+    text-align: left; /* Alineación a la izquierda */
+  }
+  
+  .product-title {
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+  }
+  
+  .product-price {
+    font-size: 0.9rem; /* Tamaño de fuente pequeño */
+    color: #666; /* Color gris */
+  }
+  
+  .product-description {
+    font-size: 0.8rem; /* Tamaño de fuente aún más pequeño */
+    color: #777; /* Color gris claro */
+  }
+  
+  .product img {
+    width: 100px; /* Ancho fijo de la imagen */
+    height: 100px; /* Alto fijo de la imagen */
+    border-radius: 12px; /* Bordes redondeados */
+    object-fit: cover; /* Ajusta la imagen */
+  }
+  
+  .product-img-container {
+    position: relative; /* Posiciona el contenedor de la imagen */
+    width: 100px; /* Ancho fijo */
+    height: 100px; /* Alto fijo */
+  }
+  
+  /* Botón para añadir al carrito */
+  .add-button {
+    background-color: #28a745; /* Fondo verde */
+    color: white; /* Texto blanco */
+    border: none; /* Elimina el borde */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    bottom: 1px; /* Ajuste vertical */
+    right: 5px; /* Ajuste horizontal */
+  }
+  
+  .add-button:hover {
+    background-color: #218838; /* Color al pasar el mouse */
+  }
+  
+  /* ==========================
+     Ajustes para pantallas pequeñas (Móviles)
+     ========================== */
+  @media (max-width: 768px) {
+    .product-container {
+      grid-template-columns: 1fr; /* Cambia a una sola columna */
+      gap: 20px; /* Ajuste del espacio entre los productos */
+      padding: 0; /* Elimina padding innecesario */
+    }
+  
+    .product {
+      flex-direction: row; /* Mantén la fila para permitir una alineación lado a lado */
+      align-items: center; /* Alinea verticalmente */
+      justify-content: flex-start; /* Alinea los elementos al inicio */
+      padding: 15px; /* Aumenta el espaciado interno en pantallas pequeñas */
+      text-align: left; /* Mantén el texto alineado a la izquierda */
+      position: relative; /* Para el botón */
+    }
+  
+    .product-info {
+      flex: 2; /* Da más espacio a la descripción */
+      padding-right: 20px; /* Espacio a la derecha */
+    }
+  
+    .product-title {
+      font-size: 1.1rem; /* Ajusta el tamaño del título en móviles */
+      margin-bottom: 8px; /* Añade espacio debajo del título */
+    }
+  
+    .product-price {
+      font-size: 1.2rem; /* Ajusta el tamaño del precio */
+      margin-bottom: 8px; /* Añade espacio debajo del precio */
+    }
+  
+    .product-description {
+      font-size: 0.9rem; /* Ajusta el tamaño de la descripción */
+      margin-bottom: 15px; /* Añade espacio debajo de la descripción */
+    }
+  
+    .product-img-container {
+      width: 120px; /* Ancho ligeramente mayor para imagen en móvil */
+      height: 120px; /* Alto ligeramente mayor para imagen en móvil */
+      margin-left: 20px; /* Añade espacio a la izquierda para separar imagen */
+    }
+  
+    .add-button {
+      position: static; /* Cambia a posición normal */
+      margin-top: 1px; /* Añade margen superior */
+      width: 85%; /* Hace el botón más grande y accesible */
+      padding: 5px; /* Aumenta el tamaño del botón */
+    }
+  }
+  
+  
+
+  /* ==========================
+     Carrito Flotante
+     ========================== */
+  .cart-float {
+    width: 100%; /* Ancho completo */
+    position: fixed; /* Posición fija en la parte inferior */
+    bottom: 0px; /* Fijado en la parte inferior */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste para centrar */
+    background-color: #17c259; /* Fondo verde */
+    color: white; /* Texto blanco */
+    border-radius: 2rem 2rem 0 0; /* Bordes redondeados solo arriba */
+    padding: 1rem 0; /* Espaciado vertical */
+    cursor: pointer; /* Cambia el cursor */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    display: flex; /* Flexbox para alinear contenido */
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+    gap: 50px; /* Espacio entre los elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    opacity: 0.9; /* Ligera opacidad */
+  }
+  
+  .cart-float.empty {
+    background-color: #ccc; /* Fondo gris cuando está vacío */
+    cursor: not-allowed; /* Cursor de no permitido */
+  }
+  
+  /* Contenido del carrito flotante */
+  .cart-float-content {
+    display: flex; /* Flexbox */
+    align-items: center; /* Alineación vertical */
+    gap: 10px; /* Espacio entre los elementos */
+  }
+  
+  /* Icono de carrito */
+  .cart-float::before {
+    content: '\f07a'; /* Icono de carrito */
+    font-family: 'Font Awesome 5 Free'; /* FontAwesome */
+    font-size: 1.5rem; /* Tamaño del icono */
+    margin-right: 1px; /* Espacio al lado del icono */
+  }
+  /* ==========================
+     Estilos Generales del Carrito
+     ========================== */
+     .cart-float {
+      width: 100%; /* Ancho completo */
+      position: fixed; /* Fijo en la parte inferior */
+      bottom: 0; /* Alineación en el fondo */
+      left: 50%; /* Centrado horizontal */
+      transform: translateX(-50%); /* Ajuste para centrar perfectamente */
+      background-color: #17c259; /* Fondo verde */
+      color: white; /* Texto blanco */
+      border-radius: 2rem 2rem 0 0; /* Bordes redondeados solo arriba */
+      padding: 1rem 0; /* Espaciado vertical */
+      cursor: pointer; /* Cambia el cursor */
+      font-size: 1.2rem; /* Tamaño de fuente */
+      display: flex; /* Flexbox para alinear elementos */
+      align-items: center; /* Alineación vertical */
+      justify-content: center; /* Alineación horizontal */
+      gap: 20px; /* Espacio entre los elementos */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+      z-index: 1000; /* Asegura que quede por encima de otros elementos */
+      opacity: 0.9; /* Ligera opacidad */
+    }
+    
+    /* ==========================
+   Modal del Carrito - Ventana Principal Inicia la ventana de carrito 
+   ========================== */
+.cart-modal {
+  position: fixed; /* Fijo en la pantalla */
+  top: 0; /* Desde la parte superior */
+  left: 0; /* Desde la parte izquierda */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: none; /* Inicialmente oculto */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  z-index: 1000; /* Asegura que se sobreponga a otros elementos */
+}
+
+/* ==========================
+   Contenido del Modal - Estilo del Carrito
+   ========================== */
+.cart-content {
+  background-color: white; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  width: 90%; /* Ancho de la ventana modal */
+  max-width: 450px; /* Ancho máximo */
+  text-align: center; /* Alineación del texto */
+  position: relative; /* Posición relativa */
+  max-height: 90vh; /* Altura máxima */
+  display: flex; /* Flexbox para alinear los elementos */
+  flex-direction: column; /* Elementos en columna */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* ==========================
+   Campos del Carrito
+   ========================== */
+.cart-items {
+  flex-grow: 1; /* Crece para ocupar espacio disponible */
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  max-height: calc(90vh - 200px); /* Altura máxima ajustada */
+  margin-bottom: 20px; /* Espaciado inferior */
+  padding-bottom: 15px; /* Espacio adicional para no estar tan pegado al borde */
+}
+
+/* ==========================
+   Resumen del Carrito y Botones Inferiores
+   ========================== */
+.cart-summary {
+  margin-top: 20px; /* Espaciado superior */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  display: flex; /* Flexbox para alinear los elementos */
+  justify-content: space-between; /* Espaciado entre los elementos */
+  align-items: center; /* Alineación central */
+  flex-wrap: wrap; /* Permite el ajuste en pantallas más pequeñas */
+  gap: 10px; /* Espacio entre los elementos */
+}
+
+/* ==========================
+   Total del Carrito
+   ========================== */
+.cart-total {
+  font-weight: bold; /* Negrita para el total */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  margin-right: 10px; /* Espaciado a la derecha */
+}
+
+/* ==========================
+   Botón de Enviar Pedido
+   ========================== */
+.send-order-button {
+  width: 100%; /* Ancho completo */
+  padding: 15px; /* Espaciado interno */
+  background-color: #28a745; /* Fondo verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.send-order-button:hover {
+  background-color: #218838; /* Fondo más oscuro al pasar el mouse */
+}
+
+/* ==========================
+   Botón de Cerrar la Ventana Modal
+   ========================== */
+.cart-close-button {
+  position: absolute; /* Posiciona el botón en la esquina superior derecha */
+  top: 10px; /* Desde la parte superior */
+  right: 10px; /* Desde la parte derecha */
+  background-color: #f8f9fa; /* Fondo gris claro */
+  color: #333; /* Texto oscuro */
+  border: none; /* Sin borde */
+  padding: 10px 12px; /* Espaciado interno */
+  font-size: 1.4rem; /* Tamaño de fuente */
+  border-radius: 50%; /* Botón circular */
+  cursor: pointer; /* Cambia el cursor */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  transition: background-color 0.3s ease, transform 0.2s; /* Transición suave */
+}
+
+.cart-close-button:hover {
+  background-color: #e2e6ea; /* Fondo más oscuro al pasar el mouse */
+  transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+/* ==========================
+   Responsividad
+   ==========================
+   Ajustes para pantallas más pequeñas.
+   */
+@media (max-width: 768px) {
+  .cart-content {
+    max-width: 95%; /* Ancho máximo en pantallas pequeñas */
+  }
+
+  .cart-summary {
+    flex-direction: column; /* Columna en lugar de fila en pantallas pequeñas */
+    align-items: stretch; /* Elementos estirados */
+  }
+
+  .send-order-button {
+    width: auto; /* Ancho automático en pantallas pequeñas */
+  }
+}
+
+    
+      .cart-float {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+        gap: 10px; /* Espacio más pequeño entre elementos */
+      }
+    
+    
+    /* ==========================
+       Estilo Adicional para Modal
+       ========================== */
+    cart-modal .cart-content {
+      display: flex; /* Flexbox para alinear contenido */
+      flex-direction: column; /* Alineación en columna */
+      align-items: stretch; /* Estira los elementos al máximo */
+    }
+    /* ==========================
+     Estilos Generales para Items del Carrito
+     ========================== */
+  .cart-item {
+    display: grid; /* Usamos Grid para organizar los elementos */
+    grid-template-columns: 80px 1fr auto; /* Definimos 3 columnas, la primera para la imagen, la segunda para la info del producto y la tercera para los controles */
+    align-items: center; /* Alineación vertical de los elementos */
+    gap: 15px; /* Espacio entre los elementos */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Línea de separación entre los items */
+  }
+  
+  /* ==========================
+     Estilos para la Imagen del Producto
+     ========================== */
+  .cart-item img {
+    width: 80px; /* Ancho de la imagen */
+    height: 80px; /* Alto de la imagen */
+    object-fit: cover; /* Ajuste de la imagen dentro del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    grid-row: span 2; /* La imagen abarca dos filas de la cuadrícula */
+  }
+  
+  /* ==========================
+     Estilos para la Información del Producto
+     ========================== */
+  .cart-item .product-info {
+    display: flex; /* Flexbox para alinear los elementos de la información */
+    flex-direction: column; /* Columna para los detalles */
+    justify-content: center; /* Centrado de los elementos */
+    align-items: flex-start; /* Alineación a la izquierda */
+  }
+  
+  /* ==========================
+     Título del Producto en el Carrito
+     ========================== */
+  .cart-item .product-title {
+    font-weight: bold; /* Negrita para el título */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-bottom: 5px; /* Espacio inferior */
+  }
+  
+  /* ==========================
+     Precio del Producto en el Carrito
+     ========================== */
+  .cart-item .product-price {
+    font-size: 0.9rem; /* Tamaño de fuente */
+    color: #666; /* Color gris para el precio */
+  }
+  
+  /* ==========================
+     Controles de Cantidad del Producto
+     ========================== */
+  .cart-item .quantity-controls {
+    display: flex; /* Flexbox para organizar los controles */
+    align-items: center; /* Alineación vertical */
+    justify-self: end; /* Alineación a la derecha */
+  }
+  
+  /* ==========================
+     Estilos para los Botones de Cantidad
+     ========================== */
+  .cart-item .quantity-controls button {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #ddd; /* Borde gris claro */
+    padding: 5px 10px; /* Espaciado interno */
+    margin: 0 5px; /* Margen entre los botones */
+  }
+  
+  /* ==========================
+     Estilo para el Input de Cantidad
+     ========================== */
+  .cart-item .quantity-controls input {
+    width: 40px; /* Ancho del input */
+    text-align: center; /* Centrado del texto dentro del input */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  /* ==========================
+     Resumen del Carrito (Totales)
+     ========================== */
+  .cart-summary {
+    margin-top: 15px; /* Espaciado superior */
+    padding: 10px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex; /* Flexbox para alinear los elementos */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Alineación central */
+  }
+  
+  /* ==========================
+     Total del Carrito
+     ========================== */
+  .cart-total {
+    font-weight: bold; /* Negrita para el total */
+    font-size: 1.1rem; /* Tamaño de fuente */
+  }
+  
+  /* ==========================
+     Botón de Enviar Pedido
+     ========================== */
+  .send-order-button {
+    margin-top: 15px; /* Espaciado superior */
+    width: 100%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    background-color: #28a745; /* Fondo verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+  }
+  
+  .send-order-button:hover {
+    background-color: #218838; /* Fondo más oscuro al pasar el mouse */
+  }
+  
+  /* ==========================
+     Estilos para Modal del Carrito
+     ========================== */
+  .cart-modal {
+    display: flex; /* Flexbox para alinear el modal */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1000; /* Asegura que se muestre encima de otros elementos */
+    transition: opacity 0.3s ease; /* Transición suave de opacidad */
+  }
+  
+  .cart-modal .cart-content {
+    max-width: 500px; /* Ancho máximo */
+    width: 100%; /* Ancho completo */
+  }
+  
